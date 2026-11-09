@@ -1,0 +1,163 @@
+:root {
+    --cinemark-red: #D81921;
+    --cinemark-dark-red: #9e0e14;
+    --cinemark-black: #121212;
+    --cinemark-card: #1e1e1e;
+    --cinemark-gold: #f5c518;
+    --cinemark-text: #ffffff;
+    --cinemark-text-muted: #b3b3b3;
+    --cinemark-border: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cinemark-black);
+    color: var(--cinemark-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Título Principal estilo Cinema */
+h1 {
+    color: var(--cinemark-red);
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    border-bottom: 3px solid var(--cinemark-red);
+    padding-bottom: 8px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Card / Content Container */
+form, body > div:not(.nav-links), body > label, body > table {
+    background: var(--cinemark-card);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid var(--cinemark-red);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    color: var(--cinemark-gold);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid var(--cinemark-border);
+    border-radius: 4px;
+    color: var(--cinemark-text);
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: var(--cinemark-red);
+    box-shadow: 0 0 8px rgba(216, 25, 33, 0.4);
+}
+
+input[disabled] {
+    background-color: #181818;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Buttons estilo Cinemark Ticket */
+button, input[type="button"] {
+    background: linear-gradient(180deg, var(--cinemark-red) 0%, var(--cinemark-dark-red) 100%);
+    color: var(--cinemark-text);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.1s, filter 0.2s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+button:hover, input[type="button"]:hover {
+    filter: brightness(1.15);
+}
+
+button:active, input[type="button"]:active {
+    transform: scale(0.98);
+}
+
+/* Tabela de Dados (get.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead tr {
+    background-color: var(--cinemark-red);
+}
+
+thead td, th {
+    color: var(--cinemark-text);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 12px;
+    letter-spacing: 0.5px;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid var(--cinemark-border);
+    color: var(--cinemark-text-muted);
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: rgba(216, 25, 33, 0.1);
+    color: var(--cinemark-text);
+}
+
+/* Links de Navegação */
+a {
+    display: inline-block;
+    color: var(--cinemark-gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--cinemark-red);
+    text-decoration: underline;
+}
